@@ -7,7 +7,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron: '1 7,12,19 * * *'
+    - cron: '0 16 * * *'
   # watch:
   #   types: started
   repository_dispatch:
@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-        git clone -b master https://gitlab.com/ZXCVB048013/hello.git ~/scripts
+          git clone -b master https://gitlab.com/ZXCVB048013/hello.git ~/scripts
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
